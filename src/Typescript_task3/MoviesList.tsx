@@ -25,11 +25,11 @@ const MoviesList = () => {
           }
         });
         if (flag) {
-          console.log("true");
           setDisplay(flag);
         } else {
-          console.log("false");
           setDisplay(flag);
+          throw new Error("Result Not Found")
+          
         }
       }
       if (inpValue.length == 0) {

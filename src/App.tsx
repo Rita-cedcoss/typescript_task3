@@ -1,8 +1,7 @@
 import React, { createContext, useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import MoviesForm from "./Typescript_task3/MoviesForm";
-import { movies} from "./Typescript_task3/typesFile";
+import { movies } from "./Typescript_task3/typesFile";
 import { ErrorBoundary } from "react-error-boundary";
 import Errorboundary from "./Typescript_task3/Errorboundary";
 
@@ -33,7 +32,6 @@ function App() {
           setMoviesarr,
           searchArr,
           setSearcharr,
-         
         }}
       >
         <ErrorBoundary FallbackComponent={Errorboundary}>
