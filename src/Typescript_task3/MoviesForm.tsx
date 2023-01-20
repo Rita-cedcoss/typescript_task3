@@ -6,6 +6,7 @@ const MoviesForm = () => {
   const nameRef = useRef<HTMLInputElement>(null);
   const ratingRef = useRef<HTMLInputElement>(null);
   const durationRef = useRef<HTMLInputElement>(null);
+  // add movie
   const movieAdded = (e: React.SyntheticEvent) => {
     e.preventDefault();
     if (
@@ -30,7 +31,7 @@ const MoviesForm = () => {
             hr = parseInt(time) / 60;
             min_hr = "h";
           }
-          if (min_hr === "h") {
+          else if (min_hr === "h") {
             let time = duration.slice(0, -1);
             hr = time;
           }
@@ -58,6 +59,7 @@ const MoviesForm = () => {
     }
   };
   return (
+    // Form 
     <div className="container-fluid mt-3 d-flex justify-content-between">
       <div className="col-4 m-auto mt-4 border p-4 mb-4 shadow rounded">
         <h3 className="text-center">Add Movies</h3>
@@ -79,6 +81,7 @@ const MoviesForm = () => {
           </button>
         </form>
       </div>
+      {/* list */}
       <MoviesList />
     </div>
   );

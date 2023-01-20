@@ -3,3 +3,6 @@ export type movies={
     rating:string,
     duration:string
 }
+export type flag={
+    errFlag:boolean
+}
